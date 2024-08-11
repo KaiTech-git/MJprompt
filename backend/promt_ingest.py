@@ -10,7 +10,7 @@ embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
 
 def ingest_prompt():
-    """Function load csv file containing proper MIDJOURNEY prompts to Pinecone. """
+    """Function load csv file containing proper MIDJOURNEY prompts to Pinecone."""
     loader = CSVLoader("Art Prompts without Subject.csv")
     # Rows in CSV will not be splitted to chunks as the longest prompt has 300 tokens size
     csv_raws = loader.load()
